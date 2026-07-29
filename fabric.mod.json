@@ -1,0 +1,42 @@
+package com.cameralock.client.config;
+
+import org.lwjgl.glfw.GLFW;
+
+public final class CameraLockKeys {
+	public static final String[] NAMES = {
+		"F", "G", "R", "V", "C", "X", "Z", "B", "TAB", "CAPS LOCK"
+	};
+	public static final int[] CODES = {
+		GLFW.GLFW_KEY_F,
+		GLFW.GLFW_KEY_G,
+		GLFW.GLFW_KEY_R,
+		GLFW.GLFW_KEY_V,
+		GLFW.GLFW_KEY_C,
+		GLFW.GLFW_KEY_X,
+		GLFW.GLFW_KEY_Z,
+		GLFW.GLFW_KEY_B,
+		GLFW.GLFW_KEY_TAB,
+		GLFW.GLFW_KEY_CAPS_LOCK
+	};
+
+	private CameraLockKeys() {
+	}
+
+	public static String nameForCode(int keyCode) {
+		for (int i = 0; i < CODES.length; i++) {
+			if (CODES[i] == keyCode) {
+				return NAMES[i];
+			}
+		}
+		return "KEY_" + keyCode;
+	}
+
+	public static int indexForCode(int keyCode) {
+		for (int i = 0; i < CODES.length; i++) {
+			if (CODES[i] == keyCode) {
+				return i;
+			}
+		}
+		return 1;
+	}
+}

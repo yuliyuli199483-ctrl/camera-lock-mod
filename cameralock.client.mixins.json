@@ -1,0 +1,55 @@
+package com.cameralock.client.config;
+
+import org.lwjgl.glfw.GLFW;
+
+public class CameraLockConfig {
+	public int toggleKey = GLFW.GLFW_KEY_F;
+	public double lookSpeed = 2.8D;
+	public double smoothness = 3.5D;
+	public double lockRadius = 10.0D;
+	public boolean autoAttack = false;
+	public boolean targetPlayers = true;
+	public boolean targetMobs = true;
+	public boolean showMessages = true;
+
+	// Targeting settings
+	public boolean prioritizeLowHP = true;
+	public boolean stickyTarget = true;
+	public double lockFOV = 90.0D;
+	public boolean showFOV = false;
+	public boolean checkVisibility = true;
+
+	// Randomization and Legit features
+	public boolean randomizeTarget = false;
+	public boolean autoCriticals = false;
+
+	// Weapon settings
+	public boolean swordMode18 = false;
+	public boolean maceLogic = true;
+	public double maceMinFallDistance = 0.5D;
+
+	public CameraLockConfig copy() {
+		CameraLockConfig copy = new CameraLockConfig();
+		copy.toggleKey = toggleKey;
+		copy.lookSpeed = lookSpeed;
+		copy.smoothness = smoothness;
+		copy.lockRadius = lockRadius;
+		copy.autoAttack = autoAttack;
+		copy.targetPlayers = targetPlayers;
+		copy.targetMobs = targetMobs;
+		copy.showMessages = showMessages;
+
+		copy.prioritizeLowHP = prioritizeLowHP;
+		copy.stickyTarget = stickyTarget;
+		copy.lockFOV = lockFOV;
+		copy.showFOV = showFOV;
+		copy.checkVisibility = checkVisibility;
+		copy.randomizeTarget = randomizeTarget;
+		copy.autoCriticals = autoCriticals;
+
+		copy.swordMode18 = swordMode18;
+		copy.maceLogic = maceLogic;
+		copy.maceMinFallDistance = maceMinFallDistance;
+		return copy;
+	}
+}
