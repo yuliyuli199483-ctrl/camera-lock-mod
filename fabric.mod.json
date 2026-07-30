@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "godset",
+	"version": "1.0.0",
+	"name": "God Set",
+	"description": "God armor and sword. Full set grants many effects and survival flight.",
+	"authors": ["God Set"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.godset.GodSetMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1,<1.21.2,>1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
